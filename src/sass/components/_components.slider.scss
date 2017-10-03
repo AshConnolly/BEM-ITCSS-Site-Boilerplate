@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    slider
+\*------------------------------------*/
+.c-slider {
+    &__wrap {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    &__inner {
+        display: flex;
+        flex: 0 0 100%;
+        width: 100%;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+    }
+    &__slide {
+        flex: 0 0 100%;
+        width: 100%;
+        align-self: flex-start;
+        margin-right:1%;
+    }
+    .is-active {
+    }
+}
+

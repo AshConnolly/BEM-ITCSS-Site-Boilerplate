@@ -1,0 +1,163 @@
+// @font-face {
+    //   font-family: "font-name";
+    //   font-weight: normal;
+    //   font-style: normal;
+    //   src: url("../font/font-name.eot");
+    //   src: url("../font/font-name.eot?#iefix") format("embedded-opentype"), url("../font/font-name.woff") format("woff"), url("../font/font-name.ttf") format("truetype"), url("../font/font-name.svg#u-font") format("svg");
+    //
+// }
+
+
+@mixin font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font_weight_style {
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "geo-black";
+    @include font_weight_style;
+    src: url("../../dist/fonts/geomanist-black-webfont.woff") format("woff");
+}
+
+// font mixins for cleaner font managment
+@mixin geo-black {
+    font-family: 'geo-black', sans-serif;
+    @include font-smoothing;
+}
+
+@mixin source-sans-light {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    @include font-smoothing;
+}
+@mixin source-sans-reg {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    @include font-smoothing;
+}
+
+@mixin source-sans-semi {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    @include font-smoothing;
+}
+@mixin lato-light {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    @include font-smoothing; 
+}
+
+.u-geo-black {
+    @include geo-black;
+    @include font-smoothing;
+}
+
+.u-source-sans-reg {
+    @include source-sans-reg;
+}
+
+
+html {
+   @include font-size(15px);
+   @include source-sans-light;
+   color: $base-font-color;
+    // letter-spacing: 0.01em;
+    @media (min-width:600px) {
+       @include font-size(16px);
+   }
+}
+
+.u-larger-body-font {
+   // @include font-size(16px);
+    @media (min-width:600px) {
+       @include font-size(18px);
+   }
+}
+
+/*IE9 + 10 doesnt like shorthand font delcrations with rems*/
+body {
+    // font: 17px/1.7 sans-serif;
+    // @include font-size(16px);
+}
+
+h1, .u-h1 {
+    @include font-size(28px);
+    @media (min-width:600px) {
+        @include font-size(32px);
+    }
+}
+
+h2, .u-h2 {
+    @include font-size(28px);
+}
+
+h3, .u-h3 {
+    @include font-size(24px);
+}
+
+h4, .u-h4 {
+    @include font-size(20px);
+}
+
+h5, .u-h5 {
+    @include font-size(18px);
+}
+
+h6, .u-h6 {
+    @include font-size(16px);
+}
+
+h1, .u-h1, h2, .u-h2, h3, .u-h3, h4, .u-h4, h5, .u-h5, h6, .u-h6 {
+    @include lato-light;
+    line-height: 1.4;
+}
+
+// p {
+//     font-size: 1.4em;
+// }
+
+a {
+    @include source-sans-reg;
+    color: $color-highlight;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+}
+
+p {
+    strong, b {
+        @include source-sans-reg;
+        color: $color-highlight; 
+    }
+}
+
+// h1, h2, h3, h4, p {
+//     a {
+//         font-size: 1em;
+//     } 
+
+// }
+
+
+/*list styling*/
+ul {
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-top: 0;
+    padding-left: 0;
+
+    li {
+        ul {
+            margin-left: 1em;
+            margin-bottom: 0;
+        }
+
+    }
+
+}
+
+

@@ -1,0 +1,91 @@
+// Partials are hidden but will be commented back in when 
+// they are added as the refactor goes on
+
+/*------------------------------------*\ 
+    Settings & Tools
+\*------------------------------------*/
+@import "settings.variables";
+@import "tools.mixins";
+@import "tools.functions";
+
+/*------------------------------------*\ 
+    Generic
+\*------------------------------------*/
+// @import "generic.normalize";
+// @import "generic.box-sizing";
+// @import "generic.reset";
+@import "generic.general";
+
+/*------------------------------------*\ 
+    Elements
+\*------------------------------------*/
+@import "elements/elements.fonts";
+// @import "elements/elements.page";
+// @import "elements/elements.links";
+// @import "elements/elements.lists";
+// @import "elements/elements.images";
+// @import "elements/elements.quotes";
+// @import "elements/elements.tables";
+// @import "elements/elements.horizontal-rule";
+
+/*------------------------------------*\ 
+    Layout 
+\*------------------------------------*/
+@import "layout.wrappers";
+@import "layout.grid-system";
+
+/*------------------------------------*\ 
+    Components
+\*------------------------------------*/
+// @import "components/components.site-footer";
+@import "components/components.buttons";
+@import "components/components.menu";
+@import "components/components.modal";
+@import "components/components.site-header";
+@import "components/components.site-footer";
+@import "components/components.slider";
+@import "components/components.tab-system";
+@import "components/components.toggle-switch";
+ 
+/*------------------------------------*\ 
+    Utilities & Fallbacks
+\*------------------------------------*/
+@import "utilities.general";
+// @import "fallbacks.main";
+
+
+
+/*------------------------------------*\ 
+    Development assistance
+\*------------------------------------*/
+// browsersync indicator placed at bottom
+#__bs_notify__ {
+	position: fixed;
+	bottom:0 !important; top: auto !important;
+	height: 50px; border-radius: 0 !important;
+}
+
+
+/*------------------------------------*\ 
+    Image overlay to ensure deisgn consistency
+\*------------------------------------*/
+
+.dev-helpers {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    // display: none;
+
+    button {
+        background: grey;
+        color: white;
+        padding: 8px 18px;
+        margin-right: 10px;
+    }
+}
+
+
+
+
+

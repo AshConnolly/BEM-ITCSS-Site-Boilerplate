@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    ##Generic
+\*------------------------------------*/
+
+/*--------- resets ---------*/
+html, body { height: 100% }
+body { margin: 0; padding: 0;background:#fff;}
+// body { overflow-x:hidden;}
+button { border: none; background: none; }
+
+*, *:before, *:after {box-sizing: border-box; }
+a { cursor:pointer; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { -ms-interpolation-mode: bicubic;/* image scaling IE fix */  height: auto; display: block;     max-width: 100%;}
+figure{margin:0;padding:0;}
+ 
+/*remove color block on touch areas on touch devices*/
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/*to remove rounded corners on IOS*/
+input[type=texarea], input[type=text],input[type=email], input[type=tel]  { -webkit-appearance: none; -webkit-border-radius: 0; border-radius: 0; }
+fieldset{border:none; padding:0; margin:0;}
+ 
+
+hr, .break { height: 1px; width: 100%; background: rgb(195, 195, 195); margin-bottom: 2em; }
+hr, .break { background: #cccccc; height: 1px; border: none; display: block; }
+
+
+/*---------- margin / padding on block level elements - vertical rhythm ---------*/
+h1, h2, h3, h4, h5, h6, p, li, blockquote, a, ul, ol {margin: 0;}
+hgroup, ul, ol, dd, figure, pre, table, fieldset, hr { margin-bottom: sp(24); }
+
+/*margin for all type elements*/
+// h1, h2, h3, h4, h5, h6, .u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6, p {margin-bottom: sp(28);}
+h1, h2, h3, h4, h5, h6, .u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6, p {margin-bottom: $base-spacing-unit;}
+// h1, h2, h3, h4, h5, h6, .u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6, p {margin-bottom: 1em;}
+
+p {
+    +h1, +h2, +h3, +h4, +h5, +h6, +.u-h1, +.u-h2, +.u-h3, +.u-h4, +.u-h5, +.u-h6 {margin-top: sp(36)}
+}
+// * {
+// 	p:last-child, .c-btn:last-child {margin-bottom: 0;}
+// }
+
+// h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {padding-bottom: 2rem;}
+// h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {padding-top:.5rem ;padding-bottom: 1.5rem;} 
+

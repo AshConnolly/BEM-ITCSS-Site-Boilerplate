@@ -1,0 +1,12 @@
+/*------------------------------------*\ 
+    site-footer    
+\*------------------------------------*/
+.c-site-footer{
+    // height:400px;
+    padding:36px;
+    border-top: 1px solid rgb(239, 239, 239);
+    background: rgba(0,0,0,.018);
+    @media (min-width:800px) {
+        padding:48px;
+    }
+}

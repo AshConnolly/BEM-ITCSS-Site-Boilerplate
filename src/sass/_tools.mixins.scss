@@ -1,0 +1,168 @@
+//Font size mixin to
+@mixin font-size($font-size, $line-height: auto) {
+    font-size: $font-size;
+
+    // font-size: ($font-size / $base-font-size) * 1rem;
+    @if $line-height==auto {
+        line-height: 1.76;
+    }
+    @else {
+        @if (type-of($line-height)==number or $line-height==inherit or $line-height==normal) {
+            line-height: $line-height;
+        }
+        @elseif ($line-height !=none and $line-height !=false) {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+        }
+    }
+}
+
+
+/* dont use placeholder as a label replacement */
+
+@mixin placeholder() {
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        @content
+    }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        @content
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        @content
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        @content
+    }
+    :placeholder-shown {
+        /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin cf {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin vertical-align($alignment:middle) {
+    &:before,
+    &:after {
+        vertical-align: $alignment;
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 100%;
+    }
+    /* Child element to be inline-block & vertical-aligned as above */
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin absolute-vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin aspect-ratio($percentage:56.25%) {
+    position: relative;
+    &:before {
+        position: relative;
+        content: '';
+        display: block;
+        padding-top: $percentage;
+        width: 100%;
+    }
+    /* Position child absolutely */
+}
+
+@mixin ui-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+    }
+}
+
+@mixin animate-prop($args...) {
+    transition-property: $args;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+
+/* for accessibilty purposes */
+@mixin visually-hidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+@mixin unstyled-link {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin word-wrap() {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+@mixin white-box {
+    margin-bottom: sp(24);
+    padding: sp(20);
+    position: relative;
+    background-color: #ffffff;
+    border: 2px solid #e8e8e8;
+    @media (min-width:900px) {
+        padding: sp(30);
+    }
+}
+
+// @mixin animate {
+//   transition: all 0.3s ease-in-out;
+// }
+

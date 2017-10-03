@@ -1,0 +1,167 @@
+/*------------------------------------*\ 
+toggle switch    
+\*------------------------------------*/
+    /* TODO RFC 
+        replace the use of '.c-toggle-switch' below with '&__' where possible. 
+        Currently we use specifity to override existing, wide reaching site styles.        
+    */
+
+    /* box-shadow cannot be animated
+    box-shadow is prefereble over border as it does not affect the layout of its contents
+    box-shadow is animated by transitioning the opacity of a pseudo element with box-shadow
+    */
+
+    //change variables below to customize size
+    $toggle-width: 54px;
+    $switch-height: 34px;
+    $border-width: 1px;
+    // for sizing the circle toggle
+    $switch-scale: 0.8;
+    $left-margin: $toggle-width - $switch-height;
+
+
+    .c-toggle-switch.c-toggle-switch.c-toggle-switch {
+        //box-shadow cannot be animated
+        //box-shadow is prefereble over border as it does not affect the layout of its contents
+        //box-shadow is animated by transitioning the opacity of a pseudo element with box-shadow
+
+        //change variables below to customize size
+        $toggle-width: 64px;
+        $switch-height: 38px;
+        $border-width: 1px;
+        // for sizing the circle toggle
+        $switch-scale: 0.8;
+        $left-margin: $toggle-width - $switch-height;
+
+
+        // if you choose to use border, not box shadow, use below $left-margin var
+        // $left-margin: $toggle-width - $switch-height - ($border-width * 2);
+        
+        @include clearfix;
+        margin-bottom: $base-spacing-unit;
+        cursor: pointer;
+        display: block; width:100%;
+
+        .c-toggle-switch__text {
+            /* TODO RFC - remove unneeded below */
+            float:none;
+            width:auto;
+            height:auto;
+            margin:0;
+            border:none;
+            &:before {display:none;}
+            /*  */
+
+            @include font-size(14px);
+            // @include font-heavy;
+            order:2;
+            text-transform: uppercase;
+            color:$black;
+            display: block;
+            border-radius:0;
+            background:none;
+            vertical-align: top;
+            padding-top: 6px;
+
+            float: right;
+            width:calc(100% - #{$toggle-width});
+            padding-left:sp(16);
+            margin: auto;
+            margin-left: 0;
+            flex:1;
+            // padding-top: sp(6);  
+        }
+
+        .c-toggle-switch__input {display: none;}
+        .c-toggle-switch__label {
+            @include clearfix;
+            // display: flex;
+
+            /* TODO RFC - remove unneeded below */
+                float:none;
+                width:auto;
+                height:auto;
+                margin:0;
+                border:none;
+                letter-spacing: normal;
+                &:before {display:none;}
+                &:after {
+                    width:auto;
+                    height:auto;
+                    position: relative;
+                    z-index:1;
+                }
+            /*  */
+
+        }
+
+        .c-toggle-switch__label-inner {
+
+            background: white;
+            // border: $border-width solid #ccc;        
+            box-shadow: inset 0 0 0 $border-width #ccc;
+            width: $toggle-width;
+            height: $switch-height;
+            display: block;
+            border-radius: 500px;
+            position: relative;
+            transition: border .3s ease-in-out;
+            float: left;
+
+
+            /* TODO RFC remove unneeded styles below */
+            border:none;
+            margin:0;
+            /*  */
+
+            // this after element exists purely to animate the box-shadow property
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                box-shadow: inset 0 0 0 $border-width $color-1;
+                width: $toggle-width;
+                height: $switch-height;
+                display: block;
+                border-radius: 500px;
+                transition: transform .3s ease;
+                transition-property: opacity;
+            }
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                content: '';
+                display: block;
+                width: $switch-height;
+                height: $switch-height;
+                background: #ccc;
+                border-radius: 50%;
+                transform: scale($switch-scale) translateY(-50%);
+                transform-origin: 50% 0;
+                transition: transform .3s ease;
+                transition-property: transform, background, left;
+            }
+        }
+
+    .c-toggle-switch__input:checked + .c-toggle-switch__label .c-toggle-switch__label-inner {
+        // use below if you wish to use border        
+        // border: $border-width solid $color-1;
+
+        // use below if box-shadow color transition is not needed
+        // box-shadow: inset 0 0 0 $border-width $color-1;
+
+         //show pseudo element (animating a box-shadow)
+         &:after { 
+            opacity: 1;
+        }
+        &:before {
+            // translateX has a division to the value to compensate for the switch-scale factor
+            transform: scale($switch-scale) translateX(($left-margin) / $switch-scale) translateY(-50%);
+            background: $color-1;
+        }
+    }
+}
+

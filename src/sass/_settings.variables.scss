@@ -1,0 +1,153 @@
+//Variables are commented in as they are implemented
+
+/*------------------------------------*\ 
+    Font variables
+\*------------------------------------*/
+$base-font-size:    16px;
+$base-line-height:  26px;
+$base-font-color: #4D4D4D;
+
+// Icon Variables - font awesome
+$icon-angle-down: '\f107';
+$icon-angle-left: '\f104';
+$icon-angle-right: '\f105';
+
+//Icons object used to generate utility classes
+$icons:
+icon-angle-down '\f107',
+icon-angle-left '\f104',
+icon-angle-right '\f105';
+
+
+/*------------------------------------*\ 
+    Spacing variables
+\*------------------------------------*/
+// vaguely fibonacci
+$sp-xs: 6px;
+$sp-s: 12px;
+$sp-m: 28px;
+$sp-l: 36px;
+$sp-xl: 60px;
+$sp-xxl: 96px;
+
+$base-spacing-unit: $sp-m;
+
+/*------------------------------------*\ 
+    Color palette
+\*------------------------------------*/
+//orange
+$color-1: #368AEA; 
+$color-1-light:  lighten(saturate(adjust-hue($color-1, 20.9016), 12.4402), 38.6275);
+// $color-1-light:  lighten($color-1, 39.5%); //orange
+$color-1-dark: darken($color-1, 10%);
+
+//green
+$color-2: #6eb52b; 
+$color-2-light: lighten($color-2, 50%);
+$color-2-light-mid: #ddf8c1;
+$color-2-dark: darken($color-2, 10%);
+
+//green
+$color-3: orange; 
+$color-3-light: lightorange; 
+$color-4: red; 
+$color-4-light: pink; 
+
+$black: #000000;
+$black-light: lighten($black, 30%);
+$white: #ffffff;
+$white-dark: darken($white,10%);
+
+// greys
+// $color-grey-xxdark: #52595E;
+// $color-grey-xdark: #58646E;
+$color-grey-xdark: #4d4d4d;
+$color-grey-dark: #afafaf;
+// $color-grey-darkmid: #D1D5D9;
+$color-grey-mid: #d1d3d4;
+// $color-grey-lightmid: #D8DDE2;
+// $color-grey-light-light: #f1f1f1;
+$color-grey-light: #ebebeb;
+$color-grey-xlight: #f1f1f1;
+$color-grey-xxlight: #f6f6f6;
+$color-grey-xxxlight: #fbfcfc;
+
+
+// chaining variable names
+$color-highlight: $color-1;
+
+// $warning: $color-3;
+// $error: $color-4;
+// $success: $color-2;
+// $info: $color-5;
+
+// text input and validation colors
+$color-active: $color-1; //orange
+$color-hover: $color-1; //orange
+$color-invalid: $color-4; //red
+$color-valid: $color-2; // green
+$color-empty: $color-3; //yellow
+
+
+/*------------------------------------*\ 
+    z-index table
+\*------------------------------------*/
+/* 5 */ $z-progress: 5;
+/* 10 */ $z-hero: 10;
+/* 20 */ $z-bio: 20;
+/* 30 */ $z-menu: 30;
+/* 40 */ $z-header: 40;
+/* 50 */ 
+/* 60 */
+/* 70 */
+/* 80 */ $z-alert: 80;
+/* 90 */
+/* 100 */$z-modal: 100;
+
+
+/*------------------------------------*\ 
+    reusuable style variables 
+\*------------------------------------*/
+// $border-grey: 1px solid #d1d3d4;
+$box-shadow: 0 10px 30px rgba(0,0,0,.3);
+$box-shadow-small: 0 5px 10px rgba(0,0,0,.3);
+$border-grey: 2px solid #d1d3d4;
+$border-grey-tab: #e8e8e8;
+
+$base-radius: 6px;
+
+ 
+/*------------------------------------*\ 
+    Media query variables
+\*------------------------------------*/
+$xs_bp: 540px;
+$s_bp: 720px;
+$m_bp: 980px;
+$l_bp: 1080px;
+$xl_bp: 1200px;
+$xxl_bp: 1440px;
+
+//Shared media query variables
+// $header-layout-change: 720px;
+
+
+/*------------------------------------*\
+    base64 images
+\*------------------------------------*/
+$img-arrow-right: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNyAxMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI3IDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+DQo8cmVjdCBmaWxsPSIjRjFGMUYxIiB3aWR0aD0iMjciIGhlaWdodD0iMTAwIi8+DQo8cG9seWdvbiBmaWxsPSIjRThFOEU4IiBwb2ludHM9IjEsMTAwIDAsMTAwIDAsMCAxLDAgMjYsNTAgIi8+DQo8L3N2Zz4NCg==';
+$img-arrow-down: "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPg0KPHJlY3QgZmlsbD0iI0YxRjFGMSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiLz4NCjxwb2x5Z29uIGZpbGw9IiNFOEU4RTgiIHBvaW50cz0iMCwzLjcgMCwwIDEwMCwwIDEwMCwzLjcgNTAsOTYuMyAiLz4NCjwvc3ZnPg0K";
+
+/*------------------------------------*\ 
+    component variables
+\*------------------------------------*/
+// these variables are shared across several components.
+// if they were only relative to one component, they should be kept in the scope of that component
+
+// header height variables - used both in the header component and the body top padding
+// $header-height-mobile: 60px;
+// $header-height-desktop: 140px;
+
+
+
+
+

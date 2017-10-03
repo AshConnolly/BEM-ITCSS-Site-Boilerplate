@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Styleguide</title>
+    <meta name="description" content="Front End Developer &amp; Designer based in glorious sheffield, UK">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="shortcut icon" href="dist/img/ash.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26406229-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<style>
+	html {background: none;}
+	body {margin-top:0; padding-top:100px;background: rgb(240, 240, 240);}
+
+	.l-content-width {width:90%;max-width:1200px; padding-left: 50px; padding-right:50px;}
+/*
+	main {padding-left: 0 !important;padding-right: 0 !important;}
+	*/
+	main {background: white; margin-bottom: 100px;}
+	section {min-width:0;}
+	section > div {padding:0;margin-left:0; margin-right:0;}
+
+	
+
+	.c-color-block {height: 80px;margin-bottom: 5px;}
+	.styleguide-block {margin-bottom: 100px;}
+	.u-black-bg-padding {background: black; padding:5px;}
+	
+	.section-title {font-size: 2.3em; background: rgb(240,240,240); text-align: center; padding: 20px; margin-bottom: 24px;}
+	code {color:deeppink;}
+	.pink {color:deeppink;}
+
+	.sg-col {background:rgba(0,0,0,.05); box-shadow: inset 0 0 0 1px #ccc;}
+	.sg-col-2 {background:rgba(0,0,0,.05); box-shadow: inset 0 0 0 1px #ccc; padding:18px;}
+	.grid-example .l-row {margin-bottom: 20px;}
+
+</style>
+
+</head>
+<body class="styleguide">
+	
+	<main class="l-content-width u-padding-large">
+		<!-- <h1>Styleguide</h1> -->
+
+		
+		<h1 class="section-title">Base elements and colors</h1>
+
+
+		<section class="styleguide-block">
+			<h1>Colors</h1>
+			<div class="l-row l-row--no-vertical-padding ">
+				<div class="l-col-25">
+					<div class="c-color-block u-color-grey-xdark-bg"></div>
+					<p>$color-grey-xdark: #4d4d4d<br>
+					rgb(77, 77, 77)</p>
+				</div>
+				<div class="l-col-25">
+					<div class="c-color-block u-color-grey-dark-bg"></div>
+					<p>$color-grey-dark: #afafaf<br>
+					rgb(175, 175, 175)</p>
+				</div>
+				<div class="l-col-25">
+					<div class="c-color-block u-color-grey-mid-bg"></div>
+					<p>$color-grey-mid: #d1d3d4<br>
+					rgb(209, 211, 212)</p>
+				</div>
+				<div class="l-col-25">
+					<div class="c-color-block u-color-grey-light-bg"></div>
+					<p>$color-grey-light: #ebebeb<br>
+					rgb(235, 235, 235)</p>
+				</div>
+				<div class="l-col-25">
+					<div class="c-color-block u-color-grey-xlight-bg"></div>
+					<p>$color-grey-xlight: #f1f1f1<br>
+					rgb(241, 241, 241)</p>
+				</div>
+				<div class="l-col-25">
+					<div class="c-color-block u-color-grey-xxlight-bg"></div>
+					<p>$color-grey-xxlight: #f6f6f6<br>
+					rgb(246, 246, 246)</p>
+				</div>
+				<div class="l-col-25">
+					<div class="c-color-block u-color-grey-xxxlight-bg"></div>
+					<p>$color-grey-xxlight: #fbfcfc<br>
+					rgb(251, 252, 252)</p>
+				</div>				
+			</div>
+			<div class="l-row l-row--no-vertical-padding ">
+				<div class="l-col-25">
+					<div class="c-color-block u-color-1-bg"></div>
+					<p>$color-1: #f2663b</p>
+				</div>
+				<div class="l-col-25">
+					<div class="c-color-block u-color-2-bg"></div>
+					<p>$color-2: #6eb52b</p>
+				</div>
+				
+			</div>
+
+		</section>
+
+
+
+		<section class="styleguide-block">
+			<h1>Buttons</h1>
+			<div class="l-row l-row--no-vertical-padding">
+				<div class="l-col-25">
+					<button class="c-btn">Button</button>
+				</div>
+				<div class="l-col-25">
+					<button class="c-btn c-btn--2">Button</button>
+				</div>
+				<div class="l-col-25">
+					<button class="c-btn c-btn--black">Button</button>
+				</div>
+				<div class="l-col-25">
+					<div class="">
+						<button class="c-btn c-btn--white">Button</button>
+					</div>
+				</div>
+			</div>
+			<div class="l-row l-row--no-vertical-padding">
+				<div class="l-col-25">
+					<button class="c-btn-outline">Button</button>
+				</div>
+				<div class="l-col-25">
+					<button class="c-btn-outline c-btn-outline--2">Button</button>
+				</div>
+				
+				<div class="l-col-25">
+					<button class="c-btn-outline c-btn-outline--black">Button</button>
+				</div>
+				<div class="l-col-25">
+					<div class="u-black-bg-padding">
+						<button class="c-btn-outline c-btn-outline--white">Button</button>
+					</div>
+				</div>
+			</div>
+			<h4>Modifiers</h4>
+			
+			<div class="l-row l-row--no-vertical-padding">
+				<div class="l-col-25">
+					<p><code>u-after-icon-angle-down</code> </p>
+					<button class="c-btn u-after-icon-angle-down">Button</button>
+				</div>
+				<div class="l-col-25">
+					<p><code>c-btn--full-width</code></p>
+					<button class="c-btn c-btn--6 c-btn--full-width">Button</button>
+				</div>
+				<div class="l-col-25">
+					<p><code>c-btn--black-text</code></p>
+					<button class="c-btn c-btn--black-text">Button</button>
+				</div>
+			</div>
+
+
+			<div class="l-row l-row--no-vertical-padding">
+				<div class="l-col-25">
+				<h4>Button text</h4>
+					<button class="c-btn-text">Button</button>
+					<button class="c-btn-text">Button</button>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="styleguide-block">
+			<h1>Typography</h1>
+			<div class="l-row l-row--no-vertical-padding">
+				<div class="l-col-50">
+					<h1>Heading 1</h1>
+					<h2>Heading 2</h2>
+					<h3>Heading 3</h3>
+					<h4>Heading 4</h4>
+					<h5>Heading 5</h5>
+					<p>Lorem <a href="">ipsum dolor sit</a> amet, consectetur adipisicing elit. Magni sunt dolores vitae libero quasi incidunt quas, quos, voluptates repellat facilis, optio, <span class="u-text-highlight">praesentium assumenda earum?</span> Sit at maxime, necessitatibus voluptates. Ratione.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sunt dolores vitae libero quasi incidunt quas, quos, voluptates repellat facilis, optio, praesentium assumenda earum? Sit at maxime, necessitatibus voluptates. Ratione.</p>
+					<h4>Heading 4</h4>
+					
+				</div>
+			</div>
+		</section>
+		
+
+		<h1 class="section-title">Grid system</h1>
+
+		<section class="styleguide-block grid-example">
+			<h1>Grids</h1>
+
+			<div class="styleguide-component">
+
+				<p>All column elements are 100% width by default.</p>
+				<p>Full width is default - this causes the grid to expand so that the content of the gird is inline with its parents content: like this paragraph.</p>
+				<p>Note the class <code>'sg-col'</code> is used in this styleguide to better present the columns, and is not needed in practice.</p>
+				<div class="l-row l-row">
+					<div class="l-col-33 sg-col"> l-col-33 </div>
+					<div class="l-col-33 sg-col"> l-col-33 </div>
+					<div class="l-col-33 sg-col"> l-col-33 </div>
+				</div>
+
+
+				<p>side padding is enabled using modifier <code>'l-row--side-padding'.</code></p>
+				<div class="l-row l-row--side-padding">
+					<div class="l-col-33 sg-col"> l-col-33 </div>
+					<div class="l-col-33 sg-col"> l-col-33 </div>
+					<div class="l-col-33 sg-col"> l-col-33 </div>
+				</div>
+
+				<p>To give spacing between column elements, wrap each column content with a div. This may cause unwanted padding (see next example for a modifier).</p>
+				<div class="l-row">
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+				</div>
+
+				<p>To remove padding top and bottom use the modifier <code>'l-row--no-vertical-padding'.</code></p>
+				<div class="l-row l-row--no-vertical-padding">
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+				</div>
+				<p>To add vertical margins, use the modifier <code>'l-row--vertical-margins'.</code></p>
+				<div class="l-row l-row--vertical-margins l-row--no-vertical-padding">
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+					<div class="l-col-33"><div class="sg-col-2"> l-col-33</div></div>
+				</div>
+
+				<p>Columns are split into <span class="pink">100%, 75%, 66%, 50%, 40%, 33%, 25%</span> widths.</p>
+				<p>Responsive changes are made by using classes: <code>'.l-col-m-50'</code> will cause a column to change to 50% width at the medium breakpoint and upwards (mobile first).</p>
+
+				<p>breakpoints: <br>
+					<code>$xs_bp: 540px;<br>
+						$s_bp: 800px;<br>
+						$m_bp: 980px;<br>
+						$l_bp: 1080px;<br>
+						$xl_bp: 1200px;<br>
+						$xxl_bp: 1440px;</code>
+					</p>
+
+					<p>Size changing girds using only classes.</p>
+
+					<div class="l-row l-row--side-padding">
+						<div class="l-col-33 l-col-m-50 sg-col""> l-col-33, l-col-m-50</div>
+						<div class="l-col-33 l-col-m-50 sg-col""> l-col-33, l-col-m-50 </div>
+						<div class="l-col-33 l-col-m-100 sg-col""> l-col-33, l-col-m-100 </div>
+					</div>
+
+
+					<p>You dont necessarily need to wrap a <code>'.l-row'</code> around each presentational row. You can stack them up to make more complex layouts:</p>
+
+					<div class="l-row l-row--side-padding">
+						<div class="l-col-33 l-col-s-50 sg-col">first child of l-row</div>
+						<div class="l-col-33 l-col-s-50 sg-col">test</div>
+						<div class="l-col-33 l-col-s-100 sg-col">test</div>
+
+						<div class="l-col-25 l-col-s-50 sg-col">test</div>
+						<div class="l-col-25 l-col-s-50 sg-col">test </div>
+						<div class="l-col-25 l-col-s-100 sg-col">test</div>
+						<div class="l-col-25 l-col-s-100 sg-col">last child of l-row</div>
+					</div>
+					
+					<p>Same as above but with spacing:</p>
+					<div class="l-row ">
+						<div class="l-col-33 l-col-s-50"> <div class="sg-col-2">test</div> </div>
+						<div class="l-col-33 l-col-s-50"> <div class="sg-col-2">test</div>  </div>
+						<div class="l-col-33 l-col-s-100"> <div class="sg-col-2">test</div> </div>
+
+						<div class="l-col-25 l-col-s-50"> <div class="sg-col-2">test</div> </div>
+						<div class="l-col-25 l-col-s-50"> <div class="sg-col-2">test</div>  </div>
+						<div class="l-col-25 l-col-s-100"> <div class="sg-col-2">test</div> </div>
+						<div class="l-col-25 l-col-s-100"> <div class="sg-col-2">test</div> </div>
+					</div>
+
+
+				</div>
+				</section>
+
+
+		<h1 class="section-title">Components</h1>
+
+<section class="styleguide-block">
+			<h1>section title</h1>
+
+			<div class="styleguide-component">
+
+					<h5 class="c-section-title">Recent work</h5>
+				
+			</div>
+		</section>
+
+<section class="styleguide-block">
+			<h1>Generic slider</h1>
+
+			<div class="styleguide-component u-color-grey-xxlight-bg" style="padding:20px;">
+
+				<section class="c-slider js-target-slider-1">
+					<div class="c-slider__wrap">
+						<div class="c-slider__inner">
+							<div class="c-slider__slide">Slide 1</div>
+							<div class="c-slider__slide">Slide 2</div>
+							<div class="c-slider__slide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias tempora officiis eius minima similique placeat voluptates, modi maiores enim praesentium vitae obcaecati suscipit, esse dolores soluta beatae quisquam assumenda repudiandae.</div>
+						</div>
+					</div>
+
+					<button class="c-btn c-btn--2 js-slider-prev">prev</button>
+					<button class="c-btn c-btn--2 js-slider-next">next</button>
+				</section>
+				
+			</div>
+		</section>
+
+
+		<section class="styleguide-block">
+			<h1>Tab system (icons optional)</h1>
+
+			<div class="styleguide-component u-color-grey-xxlight-bg" style="padding:20px;">
+
+				<section class="c-tab-system js-tab-wrapper">
+					<nav class="c-tab-system__tab-nav js-tab-nav">
+						<button class="c-tab-system__tab is-active" href="#tab-name-1" data-tab="1">			
+							<span class="c-tab-system__tab-icon u-icon-clock"></span>
+							Lorem<br>
+							Ipsum
+						</button>
+						<button class="c-tab-system__tab" href="#tab-name-2" data-tab="2">
+							<span class="c-tab-system__tab-icon u-icon-angle-down"></span>
+							Lorem<br>
+							Ipsum
+						</button>
+						<button class="c-tab-system__tab" href="#tab-name-3" data-tab="3">
+							<span class="c-tab-system__tab-icon fa fa-angle-down"></span>
+							Lorem<br>
+							Ipsum</button>
+						</nav>
+						<div class="c-tab-system__tab-content-wrap js-tab-content">
+
+							<div class="c-tab-system__tab-content is-active" data-tab-content="1">
+								sdsadsds
+							</div>
+							<div class="c-tab-system__tab-content" data-tab-content="2">quidem omnis nostrum reprehenderit nam quo, sit corporis provident facilis, doloremque repellat adipisci soluta. Aspernatur hic in, recusandae minus.</div>						
+							<div class="c-tab-system__tab-content" data-tab-content="3"> doloremque repellat adipisci soluta. Aspernatur hic in, recusandae minus.</div>						
+						</div>
+					</section>
+				
+			</div>
+		</section>
+
+
+	</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <!-- <script src="/src/js/site.js"></script> -->
+    <script src="/dist/js/main.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

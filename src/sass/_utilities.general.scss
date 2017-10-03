@@ -1,0 +1,353 @@
+// TODO categorise rules
+
+.u-highlight {
+    color: $color-highlight !important;
+}
+
+.u-highlight-bg {
+    background: $color-highlight !important;
+}
+
+// for accessibilty purposes
+.u-visually-hidden {
+    @include visually-hidden;
+}
+
+.u-visibility-hidden {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: opacity .3s ease-in-out !important;
+    transition-property: visibility, opacity !important;
+}
+
+.u-visibility-hidden-until-load {
+    visibility: hidden  !important;
+    opacity: 0  !important;
+    transition: opacity .3s ease-in-out  !important;
+    transition-property: visibility, opacity  !important;
+}
+
+.u-display-none {
+    display: none !important;
+}
+
+.u-display-table {
+    display: table !important;
+}
+
+.u-display-table-row {
+    display: table-row !important;
+}
+
+.u-display-table-cell {
+    padding-right: sp(6) !important;
+    display: table-cell !important;
+}
+
+.u-uppercase {
+    text-transform: uppercase !important;
+}
+.u-lowercase {
+    text-transform: lowercase !important;
+}
+
+.u-no-wrap {
+    white-space: nowrap !important;
+}
+
+
+.u-text-align-left {
+    text-align: left !important;
+}
+
+.u-text-align-right {
+    text-align: right !important;
+}
+
+.u-text-align-center {
+    text-align: center !important;
+}
+
+
+.u-padding-0 {
+    padding: 0 !important;
+}
+
+
+.u-margin-bottom-xs {
+    margin-bottom: $sp-xs !important;
+}
+.u-margin-bottom-s {
+    margin-bottom: $sp-s !important;
+}
+.u-margin-bottom-m {
+    margin-bottom: $sp-m !important;
+}
+.u-margin-bottom-l {
+    margin-bottom: $sp-l !important;
+}
+.u-margin-bottom-xl {
+    margin-bottom: $sp-xl !important;
+}
+.u-margin-bottom-xxl {
+    margin-bottom: $sp-xxl !important;
+}
+
+
+
+/* TODO RFC - remove unneeded specifity below */
+.u-margin-bottom-zero.u-margin-bottom-zero.u-margin-bottom-zero {
+    margin-bottom: 0 !important;
+}
+
+.u-link-bare {
+    text-decoration: none !important;
+}
+
+.u-link-natural {
+    text-decoration: underline !important;
+    color: inherit !important;
+}
+
+.u-link-obvious {
+    text-decoration: underline !important;
+}
+
+.u-white-box {
+    @include white-box;
+}
+
+.u-clearfix {
+    @include clearfix;
+}
+
+
+/* TODO RFC - remove unneeded specificty below */
+
+.u-bg-grey-very-light.u-bg-grey-very-light {
+    background: $color-grey-xxlight !important;
+}
+
+.u-uppercase {
+    text-transform: uppercase !important;
+}
+
+.u-float-right {
+    float: right !important;
+}
+
+.u-float-left {
+    float: left !important;
+}
+
+.u-cursor-pointer {
+    cursor: pointer !important;
+}
+
+
+/* Icons utility classes generated */
+
+@each $icon in $icons {
+    $key: nth($icon, 1);
+    $value: nth($icon, 2);
+    
+    // for old use of u-icon-[name]
+    .u-#{$key} {
+        &:before {
+            font-family: FontAwesome;
+            content: $value;
+            display: inline-block;
+        }
+    }
+    .u-before-#{$key} {
+        &:before {
+            content: $value;
+            font-family: FontAwesome;
+            display: inline-block;
+        }
+    }
+    .u-after-#{$key} {
+        &:after {
+            content: $value;
+            font-family: FontAwesome;
+            display: inline-block;
+        }
+    }
+}
+
+
+/*------------------------------------*\
+    Color utility classes
+\*------------------------------------*/
+
+.u-color-1 {
+    color: $color-1 !important;
+}
+
+.u-color-1-bg {
+    background-color: $color-1 !important;
+}
+
+.u-color-2 {
+    color: $color-2 !important;
+}
+
+.u-color-2-bg {
+    background-color: $color-2 !important;
+}
+
+.u-color-black {
+    color: $black !important;
+}
+
+.u-color-black-bg {
+    background-color: $black !important;
+}
+
+.u-color-white {
+    color: $white !important;
+}
+
+.u-color-white-bg {
+    background-color: $white !important;
+}
+
+.u-color-grey-xdark {
+    color: $color-grey-xdark !important;
+}
+
+.u-color-grey-xdark-bg {
+    background-color: $color-grey-xdark !important;
+}
+
+.u-color-grey-dark {
+    color: $color-grey-dark !important;
+}
+
+.u-color-grey-dark-bg {
+    background-color: $color-grey-dark !important;
+}
+
+.u-color-grey-mid {
+    color: $color-grey-mid !important;
+}
+
+.u-color-grey-mid-bg {
+    background-color: $color-grey-mid !important;
+}
+
+.u-color-grey-light {
+    color: $color-grey-light !important;
+}
+
+.u-color-grey-light-bg {
+    background-color: $color-grey-light !important;
+}
+
+.u-color-grey-xlight {
+    color: $color-grey-xlight !important;
+}
+
+.u-color-grey-xlight-bg {
+    background-color: $color-grey-xlight !important;
+}
+
+.u-color-grey-xxlight {
+    color: $color-grey-xxlight !important;
+}
+
+.u-color-grey-xxlight-bg {
+    background-color: $color-grey-xxlight !important;
+}
+
+.u-color-grey-xxxlight {
+    color: $color-grey-xxxlight !important;
+}
+
+.u-color-grey-xxxlight-bg {
+    background-color: $color-grey-xxxlight !important;
+}
+
+.u-expand-height-from-zero {
+    overflow: hidden !important;
+    height:0px !important;
+    transition: height 0.3s ease-in-out !important;
+}
+
+.u-overflow-auto {
+    overflow: auto !important;
+}
+
+.u-word-wrap {
+    @include word-wrap();
+}
+
+.u-ellipsis {
+    @include ellipsis();
+}
+
+
+
+// .u-text-highlight {
+//     @include source-sans-reg;
+//     color: $color-highlight;   
+// }
+
+
+/* Responsive show hide utilites */
+
+.u-show-until-xs {
+    @media (min-width:$xs_bp) {display: none;}
+}
+
+.u-show-until-s {
+    @media (min-width:$s_bp) {display: none;}
+}
+
+.u-show-until-m {
+    @media (min-width:$m_bp) {display: none;}
+}
+
+.u-show-until-l {
+    @media (min-width:$l_bp) {display: none;}
+}
+
+.u-show-until-xl {
+    @media (min-width:$xl_bp) {display: none;}
+}
+
+.u-show-until-xxl {
+    @media (min-width:$xxl_bp) {display: none;}
+}
+
+
+.u-show-after-xs {
+    display: none;
+    @media (min-width:$xs_bp) {display: block;}
+}
+  
+.u-show-after-s {
+    display: none;
+    @media (min-width:$s_bp) {display: block;}
+}
+
+.u-show-after-m {
+    display: none;
+    @media (min-width:$m_bp) {display: block;}
+}
+
+.u-show-after-l {
+    display: none;
+    @media (min-width:$l_bp) {display: block;}
+}
+
+.u-show-after-xl {
+    display: none;
+    @media (min-width:$xl_bp) {display: block;}
+}
+
+.u-show-after-xxl {
+    display: none;
+    @media (min-width:$xxl_bp) {display: block;}
+}
+

@@ -1,0 +1,74 @@
+//Grid System
+$gutter: 18px ;
+
+// global col styling
+[class^=l-col]{
+    width:100%;
+    float: left; padding: $gutter;
+    margin-right: 0;margin-left: 0;
+}
+
+// base coloumn widths
+.l-col-100 { width: 100%; }
+.l-col-75 { width: 75%; }
+.l-col-66 { width: 66.66%; }
+.l-col-60 { width: 60%; }
+.l-col-50 { width: 50%; }
+.l-col-40 { width: 40%; }
+.l-col-33 { width: 33.33%; }
+.l-col-25 { width: 25%; }
+
+
+.l-row {  
+    // set grid to full width (compensating for padding of col elements)
+    margin-left: -$gutter; margin-right: -$gutter;
+
+    /* TODO RFC - remove unneeded styles below */
+    padding-right: 0; padding-left: 0;
+
+    // max widths on the grid
+    &--w-1600 {max-width:1600px;}
+    &--w-1400 {max-width:1400px;}
+    &--w-1200 {max-width:1200px;}
+    &--w-1000 {max-width:1000px;}
+    &--w-800 {max-width:800px;}
+    &--w-600 {max-width:600px;}
+    &--w-560 {max-width:560px;}
+    &--w-400 {max-width:400px;}
+
+    // set grid to have side padding     
+    &--side-padding { margin: 0 auto;
+        &.l-row--w-1600 {max-width:calc(1600px + (#{$gutter} * 2) ); margin: 0 auto;}
+        &.l-row--w-1400 {max-width:calc(1400px + (#{$gutter} * 2) ); margin: 0 auto;}
+        &.l-row--w-1200 {max-width:calc(1200px + (#{$gutter} * 2) ); margin: 0 auto;}
+        &.l-row--w-1000 {max-width:calc(1000px + (#{$gutter} * 2) ); margin: 0 auto;}
+        &.l-row--w-800 {max-width:calc(800px + (#{$gutter} * 2) ); margin: 0 auto;}
+        &.l-row--w-600 {max-width:calc(600px + (#{$gutter} * 2) ); margin: 0 auto;}
+        &.l-row--w-400 {max-width:calc(400px + (#{$gutter} * 2) ); margin: 0 auto;}
+    }
+
+    &--vertical-margins {margin-top: $base-spacing-unit; margin-bottom: $base-spacing-unit;}
+    &--no-vertical-padding > [class^=l-col] {padding-top: 0; padding-bottom: 0;}   
+    &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin grid-sizes($grid-size) {
+    .l-col-#{$grid-size}-100 {width:100%}
+    .l-col-#{$grid-size}-75 {width:75%}
+    .l-col-#{$grid-size}-66 {width:66.66%}
+    .l-col-#{$grid-size}-60 {width:60%}
+    .l-col-#{$grid-size}-50 {width:50%}
+    .l-col-#{$grid-size}-40 {width:40%}
+    .l-col-#{$grid-size}-33 {width:33.33%}
+    .l-col-#{$grid-size}-25 {width:25%}
+}
+
+@media (min-width: $xs_bp) { @include grid-sizes(xs);}
+@media (min-width: $s_bp) {@include grid-sizes(s);}
+@media (min-width: $m_bp) {@include grid-sizes(m);}
+@media (min-width: $l_bp) {@include grid-sizes(l);}
+@media (min-width: $xl_bp) {@include grid-sizes(xl);}
+@media (min-width: $xxl_bp) {@include grid-sizes(xxl);}
+
+
+

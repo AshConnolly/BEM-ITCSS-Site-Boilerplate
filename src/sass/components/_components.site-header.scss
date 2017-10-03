@@ -1,0 +1,24 @@
+/*------------------------------------*\ 
+    site-header    
+\*------------------------------------*/
+.c-site-header {
+    padding: 36px;
+    background: rgba(0,0,0,.018);
+
+    @include clearfix;
+    
+    &__title {float: left;}
+
+    .c-menu {
+        float: right;
+        // display: none;
+    }
+
+    @media (min-width:800px) {
+        padding: 48px;
+        .c-contact {
+            font-size: 26px;
+        }
+    }
+
+}

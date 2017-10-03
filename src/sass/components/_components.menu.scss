@@ -1,0 +1,16 @@
+/*------------------------------------*\ 
+    menu  
+\*------------------------------------*/
+.c-menu {
+	width: 30px;
+	padding:3px 0;
+	&__line {
+		height: 2px;
+		background: $black;
+		width: 100%;
+		display: block;
+		&:nth-child(2) {
+			margin: 6px 0;
+		}
+	}
+}

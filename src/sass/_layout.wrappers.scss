@@ -1,0 +1,40 @@
+.l-content-width {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    // padding-right: sp(40);
+    // padding-left: sp(40);
+    width: calc(100% - 80px);
+    &--small {
+        max-width: 600px;        
+    }
+    
+}
+
+body {
+    display: flex;
+  flex-direction: column;
+}
+
+.l-sticky-footer-wrap {
+    // min-height: 100%;
+    // /* equal to footer height */
+    // // margin-bottom: -400px;
+    // &__spacer {
+    //     content: '';
+    //     display: block;
+    //     // height:400px;
+    //     visibility: hidden;
+    // }
+  flex: 1 0 auto;
+
+}
+
+.l-main-content-padding {
+    padding-top: sp(64);
+    padding-bottom: sp(64);
+    @media (min-width: 720px) {
+        padding-top: sp(96);
+        padding-bottom: sp(96);
+    }
+}
