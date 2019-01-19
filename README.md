@@ -1,4 +1,7 @@
 # Site Boilerplate
+
+Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same fundamental approach - begin with simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade and reduces CSS specificity issues.
+
 Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * [Atomic Design](http://patternlab.io/)
 * Object-oriented SCSS for modular development 
@@ -13,16 +16,15 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * Browsersync for faster development, easier multi browser / device testing
 * Image compression
 * Pre-set font size management
-* Basic responsive grid
-* Living style guide / patternlab
+* Minimal responsive grid
+* Living style guide / patternlab / component library
+* Flexbox sticky footer
 
 ### Updates coming soon
 * Basic accessibility guidelines
 * Media query usage instructions
 * Further elements / components to be added to style guide
-* New grid system - susy / neat
-
-Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same fundamental approach - begin with simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade and reduces CSS specificity issues.
+* Convert grid system to flexbox
 
 ###Further Reading
 Harry Roberts and Brad Frost have strongly influenced the guidelines set out below and I highly recommend giving them a read.
