@@ -3,7 +3,7 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * [Atomic Design](http://patternlab.io/)
 * Object-oriented SCSS for modular development 
 * [CSS guidelines](http://cssguidelin.es/) / [ITCSS](https://twitter.com/itcss_io) scss structure 
-* Loosely follows [BEM](https://css-tricks.com/bem-101/) to create clear CSS components but with less parent element name repetition and allowing low-level nesting. 
+* Follows [BEM](https://css-tricks.com/bem-101/) to create clear CSS components but with less parent element name repetition and allowing low-level nesting. 
 
 ### Boilerplate features:
 * Sass compilation
